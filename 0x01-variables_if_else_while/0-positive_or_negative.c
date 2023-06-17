@@ -3,7 +3,11 @@
 #include <time.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/*
+ * main(void ) is the entry point od the programe
+ *the programe testes id the number -, +, or zero
+ *
+ **/
 int main(void)
 {
 	int n;
