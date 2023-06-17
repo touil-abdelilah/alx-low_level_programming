@@ -3,15 +3,15 @@
 /**
  * main - Entry point of the program
  *
- * Return: Always 0 (Success)
+ * Return: Always (0) - Success
  */
 int main(void)
 {
-	char letter;
+	int number;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
+	for (number = 0; number <= 9; number++)
 	{
-		putchar(letter);
+		putchar((number % 10) + '0');
 	}
 
 	putchar('\n');
