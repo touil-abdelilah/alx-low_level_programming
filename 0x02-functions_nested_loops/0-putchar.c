@@ -1,16 +1,17 @@
-#include<stdio.h>
-#include"main.h"
+#include <stdio.h>
+#include "main.h"
 
-/*
+/**
+ * main - Entry point of the program
  *
- *Main function that prints _putchar
+ * Description: Prints "_putchar"
  *
- **/
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	printf("_putchar\n");
 
-int main()
-	{
-	printf("_putchar");
-
-	return(0);
+	return (0);
 }
 
