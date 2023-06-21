@@ -1,4 +1,3 @@
-#include<stdio.h>
 #include"main.h"
 /*
  *
@@ -19,6 +18,7 @@ void print_alphabet()
 {
 	char c;
 	for(c = 'a'; c <= 'z'; c++)
-	putchar ("%c",c);
+	putchar (c);
+	putchar ('\n');
 }
 
