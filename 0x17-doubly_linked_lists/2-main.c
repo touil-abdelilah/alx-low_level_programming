@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 #include "lists.h"
 
@@ -25,4 +26,3 @@ int main(void)
 
     return (EXIT_SUCCESS);
 }
-
