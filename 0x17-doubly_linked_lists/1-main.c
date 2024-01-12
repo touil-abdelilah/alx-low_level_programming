@@ -7,6 +7,7 @@
  * main - check the code
  *
  * Return: Always EXIT_SUCCESS.
+ * 
  */
 int main(void)
 {
@@ -32,3 +33,4 @@ int main(void)
     free(new);
     return (EXIT_SUCCESS);
 }
+
