@@ -1,17 +1,47 @@
+#!/usr/bin/make -f
+# Makefile for the 'school' program
+
+# Compiler
 CC = gcc
 
+# Source files
 SRC = $(wildcard *.c)
 
+# Object files
+OBJ = $(SRC:.c=.o)
+
+# Executable name
 NAME = school
 
-RM = rm -f  # Assuming 'rm' is available (adjust if needed)
+# Program to delete files
+RM = /bin/rm -f
 
+# Compiler flags
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# Default rule
 all: $(NAME)
 
-$(NAME): $(SRC) m.h  # Explicit dependency on header file
-	$(CC) $(foreach f,$(SRC),-c $f) -o $(NAME)  # Compile each source file
+# Rule to build the executable
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $@
 
-clean oclean fclean re:
-	@-$(RM) $(NAME) $(filter-out $(SRC), $(wildcard *~))
+# Rule to clean Emacs, Vim, and executable files
+clean:
+	$(RM) *~ $(NAME)
+
+# Rule to delete object files
+oclean:
+	$(RM) $(OBJ)
+
+# Rule to clean all Emacs, Vim, executable, and object files
+fclean: clean oclean
+
+# Rule to force recompilation of all source files
+re: fclean all
+
+# Check if the header file m.h exists
+$(NAME): m.h
 
 .PHONY: all clean oclean fclean re
+
